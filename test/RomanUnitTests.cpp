@@ -22,7 +22,7 @@ TEST_CASE("Convert single-digit Roman numerals")
     REQUIRE(1000 == Roman::convert("M"));
 }
 
-// ## 2) Add Roman numerals
+// 2) Add Roman numerals
 // As an elementary school teacher, I want to add Roman numerals (e.g., II, III, VI, VII, VIII, XI, XII, XIII, LX)
 TEST_CASE("Add Roman numerals")
 {
@@ -38,7 +38,7 @@ TEST_CASE("Add Roman numerals")
     REQUIRE(3888 == Roman::convert("MMMDCCCLXXXVIII"));
 }
 
-// ## 3) Subtract Roman numerals
+// 3) Subtract Roman numerals
 // As an elementary school teacher, I want to subtract Roman numerals (e.g., IV, IX, XC, XL, CD)
 TEST_CASE("Subtract Roman numerals")
 {
@@ -47,4 +47,15 @@ TEST_CASE("Subtract Roman numerals")
     REQUIRE(90 == Roman::convert("XC"));
     REQUIRE(40 == Roman::convert("XL"));
     REQUIRE(400 == Roman::convert("CD"));
+}
+
+// 4) Add and subtract Roman numerals in the same number
+// As an elementary school teacher, I want to comingle addition and subtraction of Roman numerals (e.g., XLVI=46,
+// XCVIII=98, CDXLVI=446, MCMXCVIII=1998)
+TEST_CASE("Add and subtract Roman numerals in the same number")
+{
+    REQUIRE(46 == Roman::convert("XLVI"));
+    REQUIRE(98 == Roman::convert("XCVIII"));
+    REQUIRE(446 == Roman::convert("CDXLVI"));
+    REQUIRE(1998 == Roman::convert("MCMXCVIII"));
 }
