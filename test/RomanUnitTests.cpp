@@ -59,3 +59,24 @@ TEST_CASE("Add and subtract Roman numerals in the same number")
     REQUIRE(446 == Roman::convert("CDXLVI"));
     REQUIRE(1998 == Roman::convert("MCMXCVIII"));
 }
+
+// 5) Handle invalid inputs
+// As an elementary school teacher, I want to handle invalid input strings (e.g., A, B, E, F, G, H, “”)
+TEST_CASE("Handle invalid inputs")
+{
+    // Non-Roman characters
+    REQUIRE(-1 == Roman::convert("A"));
+    REQUIRE(-1 == Roman::convert("B"));
+    REQUIRE(-1 == Roman::convert("E"));
+    REQUIRE(-1 == Roman::convert("F"));
+    REQUIRE(-1 == Roman::convert("G"));
+    REQUIRE(-1 == Roman::convert("H"));
+
+    // Empty string
+    REQUIRE(-1 == Roman::convert(""));
+
+    // Invalid sequence of valid digits
+    REQUIRE(-1 == Roman::convert("IIV"));
+    REQUIRE(-1 == Roman::convert("VIX"));
+    REQUIRE(-1 == Roman::convert("XXC"));
+}
