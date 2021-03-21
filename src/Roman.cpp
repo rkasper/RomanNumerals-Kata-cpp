@@ -1,6 +1,11 @@
 #include "Roman.h"
 
 int Roman::convert(const string roman) {
+    if (roman.length() > 1) {
+        return convert(roman.substr(0, 1)) + convert(roman.substr(1));
+    }
+
+    // else
     if ("I" == roman) {
         return 1;
     } else if ("V" == roman) {

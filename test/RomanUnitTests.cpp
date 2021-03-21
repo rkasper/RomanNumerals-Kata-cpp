@@ -21,3 +21,19 @@ TEST_CASE("Convert single-digit Roman numerals")
     REQUIRE(500 == Roman::convert("D"));
     REQUIRE(1000 == Roman::convert("M"));
 }
+
+// ## 2) Add Roman numerals
+// As an elementary school teacher, I want to add Roman numerals (e.g., II, III, VI, VII, VIII, XI, XII, XIII, LX)
+TEST_CASE("Add Roman numerals")
+{
+    REQUIRE(2 == Roman::convert("II"));
+    REQUIRE(3 == Roman::convert("III"));
+    REQUIRE(6 == Roman::convert("VI"));
+    REQUIRE(7 == Roman::convert("VII"));
+    REQUIRE(8 == Roman::convert("VIII"));
+    REQUIRE(11 == Roman::convert("XI"));
+    REQUIRE(12 == Roman::convert("XII"));
+    REQUIRE(13 == Roman::convert("XIII"));
+    REQUIRE(60 == Roman::convert("LX"));
+    REQUIRE(3888 == Roman::convert("MMMDCCCLXXXVIII"));
+}
