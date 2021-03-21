@@ -37,3 +37,14 @@ TEST_CASE("Add Roman numerals")
     REQUIRE(60 == Roman::convert("LX"));
     REQUIRE(3888 == Roman::convert("MMMDCCCLXXXVIII"));
 }
+
+// ## 3) Subtract Roman numerals
+// As an elementary school teacher, I want to subtract Roman numerals (e.g., IV, IX, XC, XL, CD)
+TEST_CASE("Subtract Roman numerals")
+{
+    REQUIRE(4 == Roman::convert("IV"));
+    REQUIRE(9 == Roman::convert("IX"));
+    REQUIRE(90 == Roman::convert("XC"));
+    REQUIRE(40 == Roman::convert("XL"));
+    REQUIRE(400 == Roman::convert("CD"));
+}

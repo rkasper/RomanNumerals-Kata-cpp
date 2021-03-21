@@ -8,7 +8,9 @@ using namespace std;
 class Roman {
 
 public:
-    static int convert(const string roman);
+    static int convert(const string& roman);
+
+    static int convert_single_digit(const string &roman);
 };
 
 
